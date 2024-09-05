@@ -1,10 +1,11 @@
 let body =document.querySelector("body");
-let boxs =document.querySelectorAll(".box");
+let boxs =document.querySelectorAll(".box")
 let resetBut =document.querySelector("#reset-butt");
 let winDiv =document.querySelector("#winDiv")
 let newGame =document.querySelector(".newGame")
 let main =document.querySelector("#main")
 let h4win = document.querySelector("#wi4")
+let h1=document.querySelector("#winn")
 
 
 
@@ -14,7 +15,17 @@ let winPatterns=[[0,1,2],[0,3,6],[0,4,8],
 [1,4,7],[2,5,8],[2,4,6],[3,4,5],[6,7,8]];
 
 let count =0;
+let col= "red";
 
+const colorXO=()=>{
+    if (col=="red"){
+        boxs.classList.add("boxXcolor")
+    }
+    else{
+            boxs.classList.remove("boxXcolor")
+            boxs.classList.add("boxOcolor")
+    }
+}
 
 boxs.forEach((box)=>{
     box.addEventListener("click",()=>{
@@ -22,16 +33,24 @@ boxs.forEach((box)=>{
         // box.innerHTML="X"
         if (turnX){
             box.innerHTML="X";
+            box.classList.add("boxXcolor")
             turnX=false;
             count++;
         }else{
             box.innerHTML="O";
             turnX=true;
             count++;
+            box.classList.remove("boxXcolor")
+            box.classList.add("boxOcolor")
+  
         }
         box.disabled=true;
         checkPatterns(box);
-        console.log(count)
+        console.log(count);
+        // colorXO();
+        if (count==9){
+            drawGame()
+        }
     }) 
 })
 const winnerMsg =(winner)=>{
@@ -56,12 +75,18 @@ const checkPatterns=()=>{
     }
 }
 let drawGame =()=>{
-    for (box of boxs){
-        box.innerHTML=" ";
-        box.disabled=false;
+            turnX=true;
+            count=0;
+            h4win.innerHTML ="its a draw"
+            winDiv.classList.remove("hide");
+            main.classList.add("hide");
+            h1.classList.add("hide");
+            for (box of boxs){
+                box.innerHTML=" ";
+                box.disabled=false;
 
+        }
     }
-}
 
 let resetGame =()=>{
     turnX=true;
@@ -71,10 +96,12 @@ let resetGame =()=>{
     box.disabled=false;}
     main.classList.remove("hide");
     winDiv.classList.add("hide");
+    h1.classList.remove("hide");
 
 }
 resetBut.addEventListener("click",resetGame)
 newGame.addEventListener("click",resetGame)
+
 
 
 

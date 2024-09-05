@@ -34,8 +34,14 @@ body{
     border: none;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
     font-size: 10vmin;
-    color: #E78895;
 }
+.boxOcolor{
+    color: #B91646;
+}
+.boxXcolor{
+    color: #105652;
+}
+
 #reset-butt{
     height: 5vmin;
     width: 14vmin;
