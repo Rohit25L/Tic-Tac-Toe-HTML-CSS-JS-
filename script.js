@@ -77,6 +77,10 @@ const checkPatterns=()=>{
 let drawGame =()=>{
             turnX=true;
             count=0;
+            h4win.innerHTML ="its a draw"
+            winDiv.classList.remove("hide");
+            main.classList.add("hide");
+            h1.classList.add("hide");
             for (box of boxs){
                 box.innerHTML=" ";
                 box.disabled=false;
@@ -92,6 +96,7 @@ let resetGame =()=>{
     box.disabled=false;}
     main.classList.remove("hide");
     winDiv.classList.add("hide");
+    h1.classList.remove("hide");
 
 }
 resetBut.addEventListener("click",resetGame)
