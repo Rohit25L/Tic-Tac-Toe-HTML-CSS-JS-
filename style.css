@@ -8,6 +8,7 @@ body{
     font-weight: bolder;
     font-size: x-large;
     color: aliceblue;
+    padding-top: 10px;
 }
 .container{
     height: 70vh;
@@ -33,7 +34,7 @@ body{
     border: none;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
     font-size: 10vmin;
-    color: #3a4845ba;
+    color: #E78895;
 }
 #reset-butt{
     height: 5vmin;
@@ -41,4 +42,30 @@ body{
     border-radius:0.3rem;
     border: none;
     font-size: medium;
+}
+.msg-cont{
+    height: 80vmin;
+    /* width: min-content; */
+    /* width: 30vmin;
+    text-align: center; */
+    /* background-color: aqua; */
+    margin-top: 20vmin;
+}
+
+.newGame{
+    height: 8vmin;
+    width: 24vmin;
+    border-radius:0.3rem;
+    border: none;
+    font-size: larger;
+    
+}
+#winn{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20vmin;
+    color: aliceblue;
+}
+.hide {
+    display: none;
 }
