@@ -13,6 +13,7 @@ let turnX= true;
 let winPatterns=[[0,1,2],[0,3,6],[0,4,8],
 [1,4,7],[2,5,8],[2,4,6],[3,4,5],[6,7,8]];
 
+let count =0;
 
 
 boxs.forEach((box)=>{
@@ -22,12 +23,15 @@ boxs.forEach((box)=>{
         if (turnX){
             box.innerHTML="X";
             turnX=false;
+            count++;
         }else{
             box.innerHTML="O";
             turnX=true;
+            count++;
         }
         box.disabled=true;
         checkPatterns(box);
+        console.log(count)
     }) 
 })
 const winnerMsg =(winner)=>{
@@ -44,22 +48,24 @@ const checkPatterns=()=>{
         let w3 =boxs[check[2]].innerText;
         if(w1 !=""&& w2 !="" && w3 != ""){
             if(w1==w2 && w2==w3){
-                console.log("winner",w1)
+                // console.log("winner",w1)
                 winnerMsg(w1);
 
             }
         }
     }
 }
-// let drawGame =()=>{
-//     for (box of boxs){
-//         box.innerHTML=" ";
-//         box.disabled=false;
+let drawGame =()=>{
+    for (box of boxs){
+        box.innerHTML=" ";
+        box.disabled=false;
 
-//     }
-// }
+    }
+}
+
 let resetGame =()=>{
     turnX=true;
+    count=0;
     for (box of boxs){
     box.innerHTML=" ";
     box.disabled=false;}
