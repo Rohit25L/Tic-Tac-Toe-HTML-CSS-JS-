@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    font-family: Monospace;
 }
 body{
     background-color: #16423C;
@@ -14,13 +15,15 @@ body{
     height: 70vh;
     /* width: 70vh; */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    /* justify-content: center;*/
+    align-items: center; 
+    /* gap: 8vmin; */
+    background-color: aquamarine;
 }
 .game{
     height: 60vmin;
     width: 60vmin;
-    /* background-color: aqua; */
+    background-color: aqua;
     display: flex;
     flex-wrap: wrap;
     gap: 1.5vmin;
@@ -74,4 +77,16 @@ body{
 }
 .hide {
     display: none;
+}
+.playerScore{
+    background-color: #B91646;
+    display: flex;
+    gap: 3vmin;
+    width: 35vw;
+    justify-content: center;
+    font-size: larger;
+}
+.playerTurn{
+    width: 35vw;
+
 }
