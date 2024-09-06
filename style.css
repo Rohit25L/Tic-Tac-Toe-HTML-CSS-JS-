@@ -16,10 +16,16 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: start;
+    gap: 1.5vmin;
+}
+.container p{
+    
 }
 .game{
     height: 60vmin;
     width: 60vmin;
+    min-width: 60vmin;
     /* background-color: aqua; */
     display: flex;
     flex-wrap: wrap;
@@ -74,4 +80,37 @@ body{
 }
 .hide {
     display: none;
+}
+.any{
+width: 60vmin;
+background-color: black;
+/* margin-right: 200px; */
+}
+.any p{
+    text-align: center;
+}
+.score{
+    width: 60vmin;
+    background-color: black;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+}
+.score div{
+    width: 15vmin;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#turn{
+    font-weight: bolder;
+    /* text-decoration-line: underline; */
+    color: white;
+    font-size: 4vmin;
+}
+#player1S{
+    font-size: 7vmin;
+}
+#player2S{
+    font-size: 7vmin;
 }

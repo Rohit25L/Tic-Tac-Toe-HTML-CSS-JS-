@@ -6,8 +6,9 @@ let newGame =document.querySelector(".newGame")
 let main =document.querySelector("#main")
 let h4win = document.querySelector("#wi4")
 let h1=document.querySelector("#winn")
-
-
+let turn =document.querySelector("#turn")
+let player1Score =document.querySelector("#player1S")
+let player2Score =document.querySelector("#player2S")
 
 let turnX= true;
 
