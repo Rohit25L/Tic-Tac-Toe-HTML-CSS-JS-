@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="/Tic-Tac-Toe-HTML-CSS-JS-/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="winDiv"
@@ -16,6 +16,9 @@
     <main id="main" class="">
     <h2 class="">Tic Tac Toe</h2>
     <div class="container ">
+        <!-- <p>turn</p> -->
+         <div class="any"><p id="turn" > Player1</p>
+        <p id="turnPlayer" > Plays First</p></div>
     <div class="game">
         <button class="box"></button>
        <button class="box"></button>
@@ -26,6 +29,10 @@
        <button  class="box"></button>
        <button  class="box"></button>
        <button  class="box"></button>
+    </div>
+    <div class="score" >
+        <div ><p id="player1S">0</p><p>player1</p></div>
+        <div><p id="player2S">0</p><p>player2</p></div>
     </div>
 </div>
 <button id="reset-butt" class="">Reset button</button>
